@@ -1,0 +1,61 @@
+:root{
+  --merah:#c8102e;
+  --putih:#ffffff;
+  --bg:#0b1220;
+}
+
+/* Brand */
+.brand-gradient{
+  background: linear-gradient(90deg, var(--merah), #ff4d4d);
+}
+
+/* Cards + hero */
+.card-soft{
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+
+.hero-accent{
+  box-shadow: 0 8px 30px rgba(200,16,46,0.12);
+}
+
+/* Spacing helpers (prevents text overlap) */
+.section-pad {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Smooth scroll behavior */
+:root { scroll-behavior: smooth; }
+
+/* Slider: hide all slides by default; JS toggles visibility */
+.slide { display: none; }
+.slide:first-child { display: block; }
+
+/* Indicators */
+#indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+}
+
+/* Active indicator */
+#indicators button.active { background: rgba(255,255,255,0.95); }
+
+/* Member modal */
+#memberModal { display: none; }
+#memberModal.show { display: flex; }
+
+/* Ensure inputs don't overflow */
+input, textarea { color: inherit; }
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .hero-accent .slide { object-position: center 30%; }
+}
+
+/* Utility tweak for nav links */
+.navlink { color: #d1d5db; text-decoration: none; }
+.navlink:hover { color: var(--merah); text-underline-position: under; }

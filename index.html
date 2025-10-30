@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paskibraka Merah Putih — Shalatiyah Garuda Muda</title>
+  <meta name="description" content="Paskibraka Merah Putih — Shalatiyah Garuda Muda. Situs resmi: kegiatan, struktur, pendaftaran." />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-900 to-black text-gray-100 antialiased">
+
+  <!-- STICKY NAV -->
+  <header class="w-full sticky top-0 z-50 backdrop-blur bg-black/40">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center brand-gradient text-white font-bold"><img src="logopakib.jpeg"></div>
+        <div>
+          <div class="font-semibold text-lg">Paskibraka</div>
+          <div class="text-xs text-gray-300">Shalatiyah Garuda Muda</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#pengertian" class="navlink">Pengertian</a>
+        <a href="#sejarah" class="navlink">Sejarah</a>
+        <a href="#visi-misi" class="navlink">Visi & Misi</a>
+        <a href="#struktur" class="navlink">Struktur</a>
+        <a href="#kegiatan" class="navlink">Tugas setiap dapartemen</a>
+        <a href="#daftar" class="navlink">Daftar</a>
+        <a href="#kontak" class="navlink">Kontak</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-expanded="false" class="p-2 rounded-md bg-white/5">Menu</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden bg-black/60 md:hidden">
+      <div class="flex flex-col gap-1 max-w-6xl mx-auto px-6 py-3 text-sm">
+        <a href="#pengertian" class="py-2 navlink">Pengertian</a>
+        <a href="#sejarah" class="py-2 navlink">Sejarah</a>
+        <a href="#visi-misi" class="py-2 navlink">Visi & Misi</a>
+        <a href="#struktur" class="py-2 navlink">Struktur</a>
+        <a href="#kegiatan" class="py-2 navlink">Tugas setiap dapartemen</a>
+        <a href="#daftar" class="py-2 navlink">Daftar</a>
+        <a href="#kontak" class="py-2 navlink">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-6">
+    <!-- HERO -->
+    <section id="hero" class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Paskibraka <span class="text-red-400">Merah Putih</span>
+        </h1>
+        <p class="mt-4 text-gray-300 max-w-2xl">Melatih kedisiplinan, kepemimpinan, dan semangat kebangsaan. Bergabunglah menjadi bagian <br class="hidden md:inline" /> Shalatiyah Garuda Muda — pelopor jiwa kebangsaan di sekolah.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#daftar" class="px-6 py-3 rounded-md bg-red-600 hover:bg-red-500 shadow-md">Daftar Sekarang</a>
+          <a href="#kegiatan" class="px-6 py-3 rounded-md border border-gray-700">Lihat Tugas Dapartemen</a>
+          <a href="https://wa.me/6285155226549" target="_blank" rel="noopener" class="px-4 py-3 rounded-md bg-emerald-600 hover:bg-emerald-500">WhatsApp</a>
+        </div>
+
+        <div class="mt-8 flex gap-6 text-sm text-gray-400">
+          <div>
+            <div class="text-xl font-semibold text-white">24</div>
+            <div>Anggota Aktif</div>
+          </div>
+          <div>
+            <div class="text-xl font-semibold text-white">2020</div>
+            <div>Didirikan</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDER / GALERI -->
+      <div>
+        <div class="relative rounded-2xl overflow-hidden hero-accent card-soft">
+          <div id="gallery" class="relative h-64 md:h-80">
+            <!-- slides inserted in HTML for accessibility -->
+            <img class="slide w-full h-full object-cover" src="foto.jpeg" />
+            <img class="slide hidden w-full h-full object-cover" src="fotobersama.jpeg" />
+            <img class="slide hidden w-full h-full object-cover" src="paskib(2).jpeg" />
+            <img class="slide hidden w-full h-full object-cover" src="paskib.jpeg" />
+            <img class="slide hidden w-full h-full object-cover" src="paskibra.jpeg" />
+            <img class="slide hidden w-full h-full object-cover" src="sekolah.jpeg" />
+          </div>
+
+          <!-- controls -->
+          <button id="prevBtn" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full" aria-label="Sebelumnya">‹</button>
+          <button id="nextBtn" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full" aria-label="Selanjutnya">›</button>
+
+          <!-- indicators -->
+          <div id="indicators" class="absolute left-1/2 -translate-x-1/2 bottom-3 flex gap-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENGERTIAN -->
+    <section id="pengertian" class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl card-soft">
+          <h2 class="text-2xl font-bold">Pengertian Paskibraka</h2>
+          <p class="mt-3 text-gray-300">Paskibraka adalah Pasukan Pengibar Bendera Pusaka — sekelompok pelajar yang dilatih khusus untuk mengibarkan dan menurunkan bendera pusaka pada upacara kenegaraan. Selain teknik baris-berbaris, Paskibraka juga membentuk karakter, kepemimpinan, dan rasa nasionalisme.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl card-soft">
+          <h3 class="font-semibold">Tugas Utama</h3>
+          <ul class="mt-3 list-disc ml-5 text-gray-300 space-y-2">
+            <li>Mengibarkan & menurunkan bendera pada upacara sekolah.</li>
+            <li>Melatih anggota pada teknik baris-berbaris & protokol.</li>
+            <li>Mewakili sekolah dalam lomba/tingkat kecamatan atau provinsi.</li>
+            <li>Menjadi Teladan Kedisiplinan dan Tanggung Jawab</li>
+            <li>Membentuk Jiwa Kepemimpinan dan Kerja Sama Tim</li>
+            <li>Menumbuhkan Semangat Nasionalisme dan Cinta Tanah Air</li>
+            <li>Menjaga Kekompakan dan Solidaritas Antaranggota</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEJARAH -->
+    <section id="sejarah" class="max-w-6xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">Sejarah Singkat</h2>
+      <div class="mt-4 p-6 rounded-2xl card-soft">
+        <p class="text-gray-300">Sejak berdiri, Paskibraka sekolah ini berfokus pada pembentukan karakter, disiplin, dan kecintaan terhadap tanah air. Program internal sejak 2020 telah melatih banyak siswa menjadi lebih disiplin dan percaya diri.</p>
+      </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section id="visi-misi" class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl card-soft">
+          <h3 class="text-xl font-bold">Visi</h3>
+          <p class="mt-3 text-gray-300">Menjadi wadah pembentuk pemimpin muda yang disiplin, bertanggung jawab, dan berjiwa kebangsaan.</p>
+        </div>
+        <div class="p-6 rounded-2xl card-soft">
+          <h3 class="text-xl font-bold">Misi</h3>
+          <ul class="mt-3 list-disc ml-5 text-gray-300 space-y-2">
+            <li>Mengembangkan kemampuan baris-berbaris serta tata upacara bendera</li>
+            <li>Mengembangkan kepemimpinan & kerja tim.</li>
+            <li>Mengadakan kegiatan pengabdian masyarakat.</li>
+            <li>Melatih kedisiplinan, tanggung jawab, dan kerja sama dalam setiap kegiatan organisasi.</li>
+            <li>Menumbuhkan rasa persaudaraan dan solidaritas antaranggota Paskibra.</li>
+            <li>enjadi teladan bagi siswa lain dalam hal sikap, etika, dan semangat juang.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUKTUR (with member cards) -->
+    <section id="struktur" class="max-w-6xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">Struktur Organisasi</h2>
+      <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="p-6 rounded-2xl card-soft space-y-3">
+          <img src="https://placehold.co/400x400/ef4444/ffffff?text=Humaini" alt="Humaini" class="w-24 h-24 rounded-full object-cover" />
+          <div>
+            <div class="font-semibold">Humaini, S.AP</div>
+            <div class="text-sm text-gray-300">Pembina</div>
+          </div>
+          <button class="openMemberBtn text-sm text-emerald-300 underline" data-name="Humaini, S.AP" data-role="Pembina" data-desc="Pembina & pengawas kegiatan paskibra.">Lihat</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 rounded-2xl card-soft space-y-3">
+          <img src="https://placehold.co/400x400/ef4444/ffffff?text=Fahrurazi" alt="Fahrurazi" class="w-24 h-24 rounded-full object-cover" />
+          <div>
+            <div class="font-semibold">Fahrurazi Akbar</div>
+            <div class="text-sm text-gray-300">Ketua</div>
+          </div>
+          <button class="openMemberBtn text-sm text-emerald-300 underline" data-name="Fahrurazi Akbar" data-role="Ketua" data-desc="Memimpin organisasi, bertanggung jawab atas kebijakan & rapat.">Lihat</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 rounded-2xl card-soft space-y-3">
+          <img src="https://placehold.co/400x400/ef4444/ffffff?text=Murtaziah" alt="Murtaziah" class="w-24 h-24 rounded-full object-cover" />
+          <div>
+            <div class="font-semibold">Murtaziah</div>
+            <div class="text-sm text-gray-300">Wakil Ketua</div>
+          </div>
+          <button class="openMemberBtn text-sm text-emerald-300 underline" data-name="Murtaziah" data-role="Wakil Ketua" data-desc="Membantu ketua & menggantikan saat berhalangan.">Lihat</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-6 rounded-2xl card-soft space-y-3">
+          <img src="https://placehold.co/400x400/ef4444/ffffff?text=Risna" alt="Risna" class="w-24 h-24 rounded-full object-cover" />
+          <div>
+            <div class="font-semibold">Risna</div>
+            <div class="text-sm text-gray-300">Sekretaris</div>
+          </div>
+          <button class="openMemberBtn text-sm text-emerald-300 underline" data-name="Risna" data-role="Sekretaris" data-desc="Mengurus administrasi, notulen, arsip.">Lihat</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="p-6 rounded-2xl card-soft space-y-3">
+          <img src="https://placehold.co/400x400/ef4444/ffffff?text=Maria" alt="Maria" class="w-24 h-24 rounded-full object-cover" />
+          <div>
+            <div class="font-semibold">Maria</div>
+            <div class="text-sm text-gray-300">Bendahara</div>
+          </div>
+          <button class="openMemberBtn text-sm text-emerald-300 underline" data-name="Maria" data-role="Bendahara" data-desc="Mengelola keuangan organisasi.">Lihat</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUGAS DEPARTEMEN + TANGGAL -->
+    <section id="kegiatan" class="max-w-6xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold;">Tugas setiap Departemen</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl card-soft">
+          <h4 class="font-semibold">Departemen Pelatihan</h4>
+          <p class="mt-2 text-gray-300">Menyusun materi latihan, jadwal, dan evaluasi anggota.</p>
+        </div>
+        <div class="p-6 rounded-2xl card-soft">
+          <h4 class="font-semibold">Departemen Perlengkapan</h4>
+          <p class="mt-2 text-gray-300">Mengurus seragam, bendera, dan inventaris.</p>
+        </div>
+        <div class="p-6 rounded-2xl card-soft">
+          <h4 class="font-semibold">Departemen Humas</h4>
+          <p class="mt-2 text-gray-300">Publikasi kegiatan, dokumentasi, dan komunikasi eksternal.</p>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="font-semibold">Tanggal Penting</h3>
+        <ul class="mt-3 list-disc ml-5 text-gray-300 space-y-2">
+          <li>17 Agustus — Upacara Kemerdekaan & Pengibaran Bendera</li>
+          <li>10 November — Peringatan Hari Pahlawan</li>
+          <li>Setiap Sabtu — Latihan Rutin</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FORM PENDAFTARAN -->
+    <section id="daftar" class="max-w-4xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold text-center">Form Pendaftaran Anggota</h2>
+      <form id="joinForm" class="mt-6 p-6 rounded-2xl card-soft space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm text-gray-300">Nama lengkap</label>
+            <input name="name" required class="mt-1 w-full px-3 py-2 rounded bg-black/20 border border-gray-700" />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">Kelas</label>
+            <input name="kelas" required class="mt-1 w-full px-3 py-2 rounded bg-black/20 border border-gray-700" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm text-gray-300">Nomor WA</label>
+            <input name="wa" required pattern="^08[0-9]{6,}$" placeholder="08xxxxxxxx" class="mt-1 w-full px-3 py-2 rounded bg-black/20 border border-gray-700" />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">Alasan Bergabung</label>
+            <input name="reason" required class="mt-1 w-full px-3 py-2 rounded bg-black/20 border border-gray-700" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-300">Catatan tambahan (opsional)</label>
+          <textarea name="notes" rows="3" class="mt-1 w-full px-3 py-2 rounded bg-black/20 border border-gray-700"></textarea>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button type="submit" class="px-6 py-3 rounded bg-red-600 hover:bg-red-500">Kirim Pendaftaran</button>
+          <div id="formMsg" class="text-sm text-emerald-300"></div>
+        </div>
+      </form>
+    </section>
+
+    <!-- KONTAK & FOOTER -->
+    <section id="kontak" class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl card-soft">
+          <h3 class="text-xl font-bold">Hubungi Kami</h3>
+          <p class="mt-3 text-gray-300">Untuk pendaftaran atau informasi, hubungi pembina atau departemen Humas.</p>
+          <div class="mt-4 flex gap-3">
+            <a href="https://wa.me/6285155226549" target="_blank" rel="noopener" class="px-4 py-3 rounded bg-emerald-600">WhatsApp</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="px-4 py-3 rounded bg-red-500">Instagram</a>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl card-soft">
+          <h3 class="text-xl font-bold">Lokasi</h3>
+          <p class="mt-3 text-gray-300">Jl. Alabio Danau Panggang, Kecamatan Danau Panggang</p>
+        </div>
+      </div>
+
+      <footer class="mt-8 text-center text-gray-400">© <span id="year"></span> Paskibraka Merah Putih — Shalatiyah Garuda Muda</footer>
+    </section>
+  </main>
+
+  <!-- MEMBER MODAL -->
+  <div id="memberModal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50">
+    <div class="bg-slate-900 rounded-xl p-6 max-w-md w-full">
+      <div class="flex justify-between items-start">
+        <div>
+          <h3 id="modalName" class="text-xl font-bold"></h3>
+          <p id="modalRole" class="text-sm text-gray-300"></p>
+        </div>
+        <button id="closeModal" class="text-gray-400">✕</button>
+      </div>
+      <p id="modalDesc" class="mt-4 text-gray-300"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
